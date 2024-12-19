@@ -4,6 +4,8 @@
 [OnlyCoiners WhatsApp Group For Job Posts]: https://chat.whatsapp.com/F7sWgD6fpbE5mQASiSJZND
 [DigitalOcean]: https://m.do.co/c/e0d6be6820ed
 [EN]: https://www.onlycoiners.com/user/onlycoiners/blog/how-to-deploy-a-node-js-app-to-digitalocean-droplet-or-other
+[ES]: https://www.onlycoiners.com/user/onlycoiners/blog/como-implementar-una-aplicacion-node-js-en-un-droplet-de-dig
+[PT]: https://www.onlycoiners.com/user/onlycoiners/blog/como-implantar-um-aplicativo-node-js-em-um-droplet-do-digita
 
 # How to Deploy a Node.js App to DigitalOcean Droplet or Other Linux VM
 
@@ -12,6 +14,8 @@
 You can see the latest posts here.
 
 - [EN]
+- [ES]
+- [PT]
 
 Deploying a Node.js application to a DigitalOcean Droplet or any Linux virtual machine is important to make your project online. 
 
