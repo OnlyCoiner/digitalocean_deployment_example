@@ -1,5 +1,7 @@
 [OnlyCoiners]: https://www.onlycoiners.com
 [OnlyCoiners Email]: mailto:dev@onlycoiners.com
+[OnlyCoiners Job Board]: https://www.onlycoiners.com/jobs
+[OnlyCoiners WhatsApp Group For Job Posts]: https://chat.whatsapp.com/F7sWgD6fpbE5mQASiSJZND
 [DigitalOcean]: https://m.do.co/c/e0d6be6820ed
 [EN]: https://www.onlycoiners.com/user/onlycoiners/blog/how-to-deploy-a-node-js-app-to-digitalocean-droplet-or-other
 
@@ -22,6 +24,10 @@ We will use PM2 here mostly because it is already pre installed and working for 
 But, there are some reasons to use PM2 as well.
 
 PM2 is a powerful process manager for Node.js applications, designed to make your life easier when running and managing production apps. It goes beyond simply starting your application—it provides a suite of features that ensure your app runs smoothly and reliably, even in the most demanding environments.
+
+We have a [WhatsApp group for job posts][OnlyCoiners WhatsApp Group For Job Posts] using the process described in this post.
+
+You can join it for latest jobs. You can also find and post jobs on [our job board][OnlyCoiners Job Board].
 
 ## Why You Should Use PM2
 
@@ -49,7 +55,7 @@ PM2 is a powerful process manager for Node.js applications, designed to make you
 8. **Cross-Platform**  
    PM2 works seamlessly on various operating systems, including Linux, macOS, and Windows, making it a versatile choice for any environment.
 
-PM2 is like the Swiss Army knife for Node.js developers. Its robust features and simplicity make it a go-to solution for production deployments. Whether you're scaling a startup app or managing a high-traffic application, PM2 ensures stability and provides peace of mind. It empowers developers to focus on building features instead of worrying about process management, making it an invaluable tool in your arsenal.
+PM2 has its robust features and simplicity make it a go-to solution for production deployments. Whether you're scaling a startup app or managing a high-traffic application, PM2 ensures stability and provides peace of mind. It empowers developers to focus on building features instead of worrying about process management, making it an invaluable tool in your arsenal.
 
 ## Prerequisites
 
@@ -71,10 +77,14 @@ $yarn dev
 ## Set Up SSH and GitHub
 
 1. **Create the Droplet**  
+
+![create_digitalocean_project](../images/create_digitalocean_project.png)
    
-Create an account or log into [DigitalOcean] and create a Node.js Droplet.  
+Create an account or log into [DigitalOcean] and create a Node.js Droplet. You can use its console and use the commands below.
+
+![use_droplet_console](../images/use_droplet_console.png)
    
-Use its `nodesource_setup.sh` script and you will have most of requirements ready including git, node, yarn or npm etc.
+Use its default `nodesource_setup.sh` script and you will have most of requirements ready including git, node, yarn or npm etc. Otherwise, you can install them manually as you did in your laptop.
      
 ```bash
 ./nodesource_setup.sh
@@ -144,7 +154,7 @@ $pm2 start npx --name onlycoiners_node -- tsx ./src/index.ts
 You will see some logs from **pm2** and other messages in your console.
 
 ```bash
-server is running on port ${PORT}
+OnlyCoiners Node.js server is running on port 8888
 ```
 
 3. **Save and Set Up PM2**  
@@ -173,7 +183,7 @@ Your app might not be working at first attempt. Use `$pm2 logs` or `$pm2 logs <y
 1. **Edit Nginx Configuration**  
 
 ```bash
-sudo vim /etc/nginx/sites-available/default
+$sudo vim /etc/nginx/sites-available/default
 ```
 
 Edit it to use the code snippet below instead and the port number for your app.
