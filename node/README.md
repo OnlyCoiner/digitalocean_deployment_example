@@ -1,8 +1,15 @@
 [OnlyCoiners]: https://www.onlycoiners.com
 [OnlyCoiners Email]: mailto:dev@onlycoiners.com
 [DigitalOcean]: https://m.do.co/c/e0d6be6820ed
+[EN]: https://www.onlycoiners.com/user/onlycoiners/blog/how-to-deploy-a-node-js-app-to-digitalocean-droplet-or-other
 
 # How to Deploy a Node.js App to DigitalOcean Droplet or Other Linux VM
+
+![DigitalOcean](../images/DigitalOcean.png)
+
+You can see the latest posts here.
+
+- [EN]
 
 Deploying a Node.js application to a DigitalOcean Droplet or any Linux virtual machine is important to make your project online. 
 
@@ -91,9 +98,11 @@ Edit the SSH config file on your server.
 This way, you can also push your updates to a git repository if you want to.
 
 ```bash
-vim ~/.ssh/config
+$vim ~/.ssh/config
 ```
-Add:
+
+Edit with the text below.
+
 ```text
 Host github.com
   HostName github.com
@@ -107,7 +116,7 @@ Host github.com
 Clone your app from GitHub.
 
 ```bash
-git clone https://github.com/OnlyCoiner/digitalocean_deployment_examples.git
+git clone https://github.com/OnlyCoiners/digitalocean_deployment_examples.git
 ```
 
 ## Use PM2 to Manage Your Node.js App
@@ -208,7 +217,7 @@ This way, you will be able to curl to the IP for your project directly instead o
 After the update, restart your nginx for your update to work.
 
 ```bash
-sudo systemctl restart nginx
+$sudo systemctl restart nginx
 ```
 
 ## Test Your Setup
@@ -233,8 +242,8 @@ Use `$curl <your-server-ip>` after you close SSH connectio to your droplet or VM
 Optionally, you can test PM2 is managing your app properly with these again.
 
 ```bash
-pm2 list
-pm2 logs
+$pm2 list
+$pm2 logs
 ```
 
 ## Troubleshooting Tips
@@ -242,7 +251,7 @@ pm2 logs
 - Check application logs for errors:
 
 ```bash
-pm2 logs onlycoiners_node
+$pm2 logs onlycoiners_node
 ```
 
 - Ensure your SSH key and Nginx configuration are correct.

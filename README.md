@@ -5,6 +5,8 @@
 
 # DigitalOcean Deployment Examples
 
+![DigitalOcean](./images/DigitalOcean.png)
+
 Here are examples you can use to deploy your app to [DigitalOcean] droplets.
 
 Create, Earn and network with [OnlyCoiners]! 
